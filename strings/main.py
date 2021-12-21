@@ -26,6 +26,3 @@ print(name_short)
 
 chant = (f"{player[-len(player):4]}! "*4)[:23]
 print(chant)
-print(len(chant))
-print(2 != 3)
-print(2 != 2)
