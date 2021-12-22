@@ -26,3 +26,8 @@ print(name_short)
 
 chant = (f"{player[-len(player):4]}! "*4)[:23]
 print(chant)
+
+good_chant = len(chant)
+print(good_chant)
+
+print(chant != 23)
