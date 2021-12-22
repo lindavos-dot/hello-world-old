@@ -6,8 +6,8 @@ __human_name__ = 'strings'
 
 scorer_one = "Ruud Gullit"
 scorer_two = "Marco van Basten"
-goal_0 = str(32)
-goal_1 = str(54)
+goal_0 = "32"
+goal_1 = "54"
 scorers = scorer_one + " scored in the \'" + goal_0, scorer_two + " scored in the \'" + goal_1
 print (scorers)
 
