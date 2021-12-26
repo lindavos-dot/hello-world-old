@@ -27,5 +27,5 @@ print(name_short)
 chant = (f"{player[-len(player):4]}! "*4)[:-1]
 print(chant)
 
-good_chant = True
-print(chant == good_chant)
+good_chant = chant[-1:] == "!"
+print(good_chant)
