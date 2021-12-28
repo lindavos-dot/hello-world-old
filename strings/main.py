@@ -24,8 +24,8 @@ print(last_name_len)
 name_short = player[0] + "." + player[player.find(" "):]
 print(name_short)
 
-chant = (f"{first_name}! "*4)[:-1]
+chant = (f"{first_name}! "*len(first_name))[:-1]
 print(chant)
 
-good_chant = chant[-1:] == "!"
+good_chant = chant[-1] == "!"
 print(good_chant)
