@@ -9,9 +9,8 @@ __human_name__ = 'functions'
 #1 greet: takes a name and returns a string in the format:
 
 def greet(name):
-    total = f"Hello, {name}!"
-    return (total)
-
+    return f"Hello, {name}!"
+    
 print(greet("Bob"))
 
 #2 add: takes three numbers (integers or floats) and returns their sum. Example:
