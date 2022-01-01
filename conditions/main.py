@@ -27,13 +27,6 @@ __human_name__ = 'conditions'
     # The weather is sunny
     # But is only possible when:
     # The cows are not on the pasture
-weather = ["rainy", "sunny",  "windy", "neutral"]
-weather, time_of_day = ["day", "night"]
-cow_milking_status = ["need_milking" == True, "do_not_need_milking" == False]
-location_of_the_cows = ["pasture", "cowshed"]
-season = ["winter", "spring", "summer", "fall"]
-slurry_tank = ["full" == True, "not_full" == False]
-grass_status = ["long" == True, "short" == False]
 
 def farm_action(weather, time_of_day, cow_milking_status, location_of_the_cows, season, slurry_tank, grass_status):
     if location_of_the_cows == "pasture" and time_of_day == "night" and weather == "rainy":
