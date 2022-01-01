@@ -17,16 +17,14 @@ print(list_of_films)
 
 # Write a function won_golden_globe that takes a film name and returns True or False based on whether or not this movie won a Golden Globe.
 
-film_won_golden_globe = ["Jaws", "E.T. the Extra-Terrestrial", "Star Wars: Episode IV – A New Hope", "Memoirs of a Geisha"]
+list_golden_globe = ["Jaws", "E.T. the Extra-Terrestrial", "Star Wars: Episode IV - A New Hope", "Memoirs of a Geisha", "element"]
 
-def won_golden_globe(film): 
-    if (film) in (film_won_golden_globe):
-        return True
-    else: 
-        return False
+def won_golden_globe(list_to_search, element):
+  if element in list_to_search:
+    return True
+  else:
+    return False
 
-print(won_golden_globe("Jaws"))
+print(won_golden_globe(list_golden_globe, "Jaws"))
 
-# Write a function remove_toto_albums that takes a list of strings, removes Joseph's Toto albums from it and returns the tidy list.
-
-def 
+# Write a function remove_toto_albums that takes a list of strings, removes Joseph's Toto albums from it and returns the tidy list. 
