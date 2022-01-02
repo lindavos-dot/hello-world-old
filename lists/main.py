@@ -10,6 +10,7 @@ __human_name__ = 'lists'
 list_of_films = ["Daddy-O", "I passed for White", "The Secret Ways", "Bachelor Flat", "Daimond Head", "Gidget Goed to Rome"]
 
 def alphabetical_order(list):
+    list = input(x)
     return list.sort()
 
 alphabetical_order(list_of_films)
