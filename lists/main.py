@@ -29,17 +29,21 @@ def won_golden_globe(list_to_search, element):
 print(won_golden_globe(list_golden_globe, "Jaws"))
 
 for element in list_golden_globe:
-  print(element.islower())
+  print(element.lower())
 
 # Write a function remove_toto_albums that takes a list of strings, removes Joseph's Toto albums from it and returns the tidy list. 
 
 toto_albums = ["Fahrenheit", "The Seventh One", "Toto XX", "Falling in Between", "Old Is New"]
-list_of_films.append(toto_albums)
+list_of_films.extend(toto_albums)
+
 print(list_of_films)
 
-def remove_toto_albums(list_to_keep, delete_from_list):
-    return list_to_keep.remove(delete_from_list)
+def remove_toto_albums(list1, list2):
+    for element in list1:
+        if element in list2:
+          list2.remove(element)
+    return list2
 
-remove_toto_albums(list_of_films, toto_albums)
+remove_toto_albums(toto_albums, list_of_films)
+
 print(list_of_films)
-
