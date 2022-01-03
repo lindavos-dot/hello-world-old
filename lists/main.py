@@ -10,11 +10,8 @@ __human_name__ = 'lists'
 list_of_films = ["Daddy-O", "I passed for White", "The Secret Ways", "Bachelor Flat", "Daimond Head", "Gidget Goed to Rome"]
 
 def alphabetical_order(list):
-    list = input("alphabetical_order:"())
+    list = input("Welke lijst wil je sorteren:")
     return list.sort()
-
-alphabetical_order(list_of_films)
-print(list_of_films)
 
 # Write a function won_golden_globe that takes a film name and returns True or False based on whether or not this movie won a Golden Globe.
 # Look into using the lower-function on the given film string.
