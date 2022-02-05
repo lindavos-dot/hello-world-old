@@ -7,13 +7,11 @@ Example = "This is an example of a string"
 print (Example)
 Example = "This is also an example of a string"
 print (Example)
-Number = 3
-print (Number)
-Number = 9999
+Number = [3, 5, 8]
 print (Number)
 
 a = 1
 b = 2
 
-boolean_value = a > b
+boolean_value = a == b
 print (boolean_value)
