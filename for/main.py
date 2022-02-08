@@ -42,7 +42,7 @@ def most_vowels(countries):
 
   sorted_count = sorted(
       number_count.items(),
-      key=lambda contestant: contestant[1],
+      key=lambda winning_countries: winning_countries[1],
       reverse = True
   )
 
