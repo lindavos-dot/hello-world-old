@@ -51,6 +51,17 @@ def most_vowels(countries):
 
 # alphabet_set: takes a list of country names and returns a list of country names whose letters can be combined to form the complete alphabet. 
 
+collection = []
+alphabet = ["q", "w", "r", "t", "y" "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
+
+def alphabet_set(countries):
+    for country in countries:
+      for letter in alphabet:
+        if letter in country.lower():
+          alphabet.remove(letter)          
+          if country not in collection:
+            collection.append(country)
+    return collection, len(collection), len(alphabet)
 
 
 # This block is only run if this file is the entrypoint; python main.py
@@ -63,6 +74,7 @@ if __name__ == "__main__":
 
 print(shortest_names(get_countries()))
 print(most_vowels(get_countries()))
+print(alphabet_set(get_countries()))
 
 
 
