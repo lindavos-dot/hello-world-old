@@ -10,19 +10,20 @@ if __name__ == "__main__":
 
 # unique_koala_facts: takes an integer as an argument and returns that number of unique koala facts in a list. 
 
-
-koala_facts = []
-
-
 def unique_koala_facts(number):
-    while len(koala_facts) < number:
+    koala_facts = []
+    loops = 0
+    while loops < 1000 and len(koala_facts) < number:
         fact = random_koala_fact()
-        koala_facts.append(fact)            
-    return len(koala_facts)
+        loops += 1
+        if fact not in koala_facts:
+            koala_facts.append(fact)
+    return koala_facts
 
 
+print(unique_koala_facts(6))
 print(unique_koala_facts(60))
 
 # num_joey_facts: young marsupials are called 'joeys'. How many unique facts mentioning this term are in our facts dataset?
 
-# koala_weight: somewhere in the data is a fact about how heavy a koala is. This function should return that weight in kilogram (kg) as an integer.
+# koala_weight: somewhere in the data is a fact about how heavy a koala is. This function should return that weight in kilogram (kg) as an intege
