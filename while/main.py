@@ -21,9 +21,32 @@ def unique_koala_facts(number):
     return koala_facts
 
 
-print(unique_koala_facts(6))
-print(unique_koala_facts(60))
+# print(unique_koala_facts(6))
+# print(unique_koala_facts(60))
 
 # num_joey_facts: young marsupials are called 'joeys'. How many unique facts mentioning this term are in our facts dataset?
 
-# koala_weight: somewhere in the data is a fact about how heavy a koala is. This function should return that weight in kilogram (kg) as an intege
+def num_joey_facts():
+    count = 0
+    facts_10_times = []
+    joey_facts = []
+    
+    while count < 10:
+        fact = random_koala_fact()
+        facts_10_times.append(fact)
+        if fact not in facts_10_times:
+            facts_10_times.append(fact)
+        elif facts_10_times[0] == fact:
+            count += 1
+    
+        for facts in facts_10_times:
+            if "joey" in facts:
+                if facts not in joey_facts:
+                    joey_facts.append(facts)
+
+    return len(joey_facts) 
+
+  
+# print(num_joey_facts())
+
+# koala_weight: somewhere in the data is a fact about how heavy a koala is. This function should return that weight in kilogram (kg) as an integer
