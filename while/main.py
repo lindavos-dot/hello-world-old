@@ -50,3 +50,19 @@ def num_joey_facts():
 # print(num_joey_facts())
 
 # koala_weight: somewhere in the data is a fact about how heavy a koala is. This function should return that weight in kilogram (kg) as an integer
+
+def koala_weight():
+    loops = 0
+    weight_fact = ""
+    
+    while loops < 1000:
+        fact = random_koala_fact()
+        loops += 1
+        
+        if "kg." in fact:
+            weight_fact = fact
+  
+    return int(weight_fact[-5:-3])
+
+
+# print(koala_weight())
