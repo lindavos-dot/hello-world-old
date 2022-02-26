@@ -19,7 +19,7 @@ def create_passport(name, date_of_birth, place_of_birth, height, nationality):
     return passport_person
 
 
-my_passport = create_passport("Linda Vos", "1987-9-13", "Leeuwarden", 1.70, "Netherlands")
+my_passport = create_passport("Linda Vos", "1986-8-19", "Amsterdam", 1.80, "Netherlands")
 print(my_passport["name"])
 
 # Part 2: Add Stamp
