@@ -24,5 +24,22 @@ print(my_passport["name"])
 
 # Part 2: Add Stamp
 
+def add_stamp(passport, country):
+    if "stamps" not in passport:
+        passport["stamps"] = []
+    
+    if country not in passport["stamps"] and country != passport["nationality"]:
+            passport["stamps"].append(country)
+    return passport
+
+    
+add_stamp(my_passport, "Germany")
+print(my_passport)
+
+add_stamp(my_passport, "Belgium")
+print(my_passport)
+
+add_stamp(my_passport, "Netherlands")
+print(my_passport)
 
 # Part 3: Add biometric data
