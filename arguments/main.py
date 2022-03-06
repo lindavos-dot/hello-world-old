@@ -39,3 +39,11 @@ def force(mass, body="earth"):
 # print(force(0.1))
 
 # Part 3: Gravity
+
+def pull(m1, m2, d):
+    n = 0.00000000006674
+    pull = n * ((m1 * m2) / (d**2))
+    return pull
+
+
+# print(pull(800, 1500, 3))
