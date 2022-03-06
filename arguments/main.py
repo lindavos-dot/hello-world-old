@@ -33,6 +33,7 @@ def force(mass, body="earth"):
     force = mass * surface_gravity[body]
     return force
 
+
 # print(force(0.1, "sun"))
 # print(force(0.1, "earth"))
 # print(force(0.1, "pluto"))
