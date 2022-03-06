@@ -16,6 +16,7 @@ def greet(name, template= "Hello, <name>!"):
 # Part 2: Force
 
 def force(mass, body="earth"):
+    lower = body.lower()
     surface_gravity = {
         "sun": 274,
         "jupiter": 24.9,
@@ -30,13 +31,13 @@ def force(mass, body="earth"):
         "pluto": 0.6, 
     }
 
-    force = mass * surface_gravity[body]
+    force = mass * surface_gravity[lower]
     return force
 
 
-# print(force(0.1, "sun"))
-# print(force(0.1, "earth"))
-# print(force(0.1, "pluto"))
+# print(force(0.1, "Sun"))
+# print(force(0.1, "Earth"))
+# print(force(0.1, "Pluto"))
 # print(force(0.1))
 
 # Part 3: Gravity
