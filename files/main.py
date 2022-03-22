@@ -2,6 +2,7 @@ __winc_id__ = "ae539110d03e49ea8738fd413ac44ba8"
 __human_name__ = "files"
 
 from functools import cache
+from importlib.resources import path
 import os
 from site import abs_paths
 import zipfile
@@ -44,7 +45,14 @@ def cached_files():
 
 # 4. find_password
 
-def find_password():
-    print()
+def find_password(paths):
+    data_password = []
+    for files in paths:
+        with open(files, "r") as read_file:
+            for lines in read_file:
+                if "password" in read_file.read():
+                    data_password.append(lines)
+                    return print(data_password)
+    
 
 find_password(cached_files())
