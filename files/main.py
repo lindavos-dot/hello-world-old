@@ -46,13 +46,11 @@ def cached_files():
 # 4. find_password
 
 def find_password(paths):
-    data_password = []
     for files in paths:
         with open(files, "r") as read_file:
-            for lines in read_file:
-                if "password" in read_file.read():
-                    data_password.append(lines)
-                    return print(data_password)
+            content = read_file.read()
+            if "password" in content:
+                    print(content[108:137])
     
 
-find_password(cached_files())
+# find_password(cached_files())
