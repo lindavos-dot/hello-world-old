@@ -25,7 +25,7 @@ def cache_zip(zip_path, dir_path):
         return unpack_zip.extractall(path = dir_path)
 
 
-# cache_zip("c:/Users/Linda Vos/Desktop/hello-world/files/data.zip", "c:/Users/Linda Vos/Desktop/hello-world/files/cache")
+# cache_zip("", "")
 # resultaat: 999 bestanden nu ook in cache
 
 # 3. cached_files
