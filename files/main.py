@@ -1,11 +1,9 @@
 __winc_id__ = "ae539110d03e49ea8738fd413ac44ba8"
 __human_name__ = "files"
 
-from functools import cache
-from importlib.resources import path
 import os
-from site import abs_paths
 import zipfile
+import shutil
 
 cwd = os.getcwd()
 cache_folder = os.path.join(cwd, "cache")
@@ -13,8 +11,8 @@ cache_folder = os.path.join(cwd, "cache")
 # 1. clean_cache
 
 def clean_cache():
-    if os.path.exists(cache_folder) == True:
-        os.remove(cache_folder)
+    if os.path.exists(cache_folder):
+        shutil.rmtree(cache_folder)
     return os.mkdir(cache_folder)
 
 
@@ -27,18 +25,18 @@ def cache_zip(zip_path, dir_path):
         return unpack_zip.extractall(path = dir_path)
 
 
-# cache_zip("hier stond het pad naar data.zip", "hier stond het pad naar cache")
+# cache_zip("c:/Users/Linda Vos/Desktop/hello-world/files/data.zip", "c:/Users/Linda Vos/Desktop/hello-world/files/cache")
 # resultaat: 999 bestanden nu ook in cache
 
 # 3. cached_files
 
 def cached_files():
-    abs_path = []
+    list_abs_paths = []
     files = os.listdir(cache_folder)
     for file in files:
-        if file not in abs_path:
-            abs_path.append(os.path.abspath(os.path.join(cache_folder, file)))
-    return abs_path
+        if file not in list_abs_paths:
+            list_abs_paths.append(os.path.abspath(os.path.join(cache_folder, file)))
+    return list_abs_paths
 
 
 # print(cached_files())
@@ -48,9 +46,9 @@ def cached_files():
 def find_password(paths):
     for files in paths:
         with open(files, "r") as read_file:
-            content = read_file.read()
-            if "password" in content:
-                    print(content[108:137])
-    
+            for line in read_file:
+                if "password" in line:
+                    return line.split()[1]
 
-# find_password(cached_files())
+    
+print(find_password(cached_files()))
