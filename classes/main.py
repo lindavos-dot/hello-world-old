@@ -19,7 +19,7 @@ class Player():
         list = [speed, endurance, accuracy]
         for input in list:
             if input < 0 or input > 1: 
-                raise ValueError('value should be between 0 and 1')
+                raise ValueError("value should be between 0 and 1")
           
 
     def introduce(self):
