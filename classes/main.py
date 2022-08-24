@@ -85,7 +85,7 @@ player_1 = Player("Hans van Breukelen", 0.8, 0.7, 0.5)
 # print(player_1.__dict__)
 # print(player_1.introduce())
 
-player_2 = Player("Frank de Boer", 0.8, 0.7, 0.6)
+player_2 = Player("Frank de Boer", 0.8, 0.7, 0.5)
 # print(player_2.__dict__)
 # print(player_2.strength())
 
